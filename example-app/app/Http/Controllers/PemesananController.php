@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Province;
 use Illuminate\Http\Request;
+use App\Models\Pemesanan;
+use App\Models\Province;
+
 
 class PemesananController extends Controller
 {
@@ -14,7 +16,7 @@ class PemesananController extends Controller
      */
     public function index()
     {
-        //
+        // Placeholder for index method if needed
     }
 
     /**
@@ -24,9 +26,8 @@ class PemesananController extends Controller
      */
     public function create()
     {
-        $province = Province::all();
-        // dd($province->where('id','=',11)->first()->regencies);
-        return view('pemesanan',compact('province'));
+        $provinces = Province::all();
+        return view('pemesanan', compact('provinces'));
     }
 
     /**
@@ -37,8 +38,48 @@ class PemesananController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try {
+            $validatedData = $request->validate([
+                'phone' => 'required|string',
+                'jalan' => 'required|string',
+                'no_rumah' => 'required|string',
+                'jenis_produk' => 'required|string',
+                'jenis_kain' => 'required|string',
+                'ukuran' => 'required|string',
+                'upload_foto' => 'required|file|mimes:jpg,png',
+                'deskripsi' => 'required|string',
+                'province' => 'required|string|max:255',
+                'city' => 'required|string|max:255',
+                'kecamatan' => 'required|string|max:255',
+                'kelurahan' => 'required|string|max:255',
+            ]);
+
+            $filePath = $request->file('upload_foto')->store('uploads', 'public');
+
+            $pemesanan = new Pemesanan();
+            $pemesanan->no_hp = $validatedData['phone'];
+            $pemesanan->jalan = $validatedData['jalan'];
+            $pemesanan->no_rumah = $validatedData['no_rumah'];
+            $pemesanan->jenis_produk = $validatedData['jenis_produk'];
+            $pemesanan->jenis_kain = $validatedData['jenis_kain'];
+            $pemesanan->ukuran = $validatedData['ukuran'];
+            $pemesanan->upload_foto = $filePath;
+            $pemesanan->deskripsi = $validatedData['deskripsi'];
+            $pemesanan->province = $validatedData['province'];
+            $pemesanan->city = $validatedData['city'];
+            $pemesanan->kecamatan = $validatedData['kecamatan'];
+            $pemesanan->kelurahan = $validatedData['kelurahan'];
+
+$pemesanan->save();
+
+            $pemesanan->save();
+
+            return redirect()->route('pemesanan.create')->with('success', 'Data berhasil disimpan.');
+        } catch (\Exception $e) {
+            return back()->withErrors(['error' => $e->getMessage()]);
+        };
     }
+
 
     /**
      * Display the specified resource.
@@ -48,7 +89,7 @@ class PemesananController extends Controller
      */
     public function show($id)
     {
-        //
+        // Placeholder for show method if needed
     }
 
     /**
@@ -59,7 +100,7 @@ class PemesananController extends Controller
      */
     public function edit($id)
     {
-        //
+        // Placeholder for edit method if needed
     }
 
     /**
@@ -71,7 +112,7 @@ class PemesananController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // Placeholder for update method if needed
     }
 
     /**
@@ -82,6 +123,6 @@ class PemesananController extends Controller
      */
     public function destroy($id)
     {
-        //
+
     }
 }

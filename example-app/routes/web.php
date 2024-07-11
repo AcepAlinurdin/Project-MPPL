@@ -19,6 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -30,6 +31,9 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/pemesanan', [PemesananController::class,'create'])->middleware(['auth', 'verified'])->name('pemesanan');
+Route::post('/pemesanan', [PemesananController::class, 'store'])->name('pemesanan.store');
+Route::get('/pemesanan/create', [PemesananController::class, 'create'])->name('pemesanan.create');
+
 Route::get('/artikel', function () {
     return view('artikel');
 })->middleware(['auth', 'verified'])->name('artikel');
