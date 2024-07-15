@@ -74,10 +74,17 @@ $pemesanan->save();
 
             $pemesanan->save();
 
-            return redirect()->route('pemesanan.create')->with('success', 'Data berhasil disimpan.');
+            return redirect()->route('pemesanan.success')->with('success', 'Data berhasil disimpan.');
         } catch (\Exception $e) {
             return back()->withErrors(['error' => $e->getMessage()]);
-        };
+        }
+    }
+
+    public function success()
+    {
+        $pemesanan = Pemesanan::latest()->first(); // Contoh pengambilan data pemesanan terakhir, sesuaikan dengan kebutuhan Anda
+
+        return view('pemesanan_success', compact('pemesanan'));
     }
 
 

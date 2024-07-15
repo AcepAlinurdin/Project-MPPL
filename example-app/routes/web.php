@@ -33,6 +33,8 @@ Route::middleware('auth')->group(function () {
 Route::get('/pemesanan', [PemesananController::class,'create'])->middleware(['auth', 'verified'])->name('pemesanan');
 Route::post('/pemesanan', [PemesananController::class, 'store'])->name('pemesanan.store');
 Route::get('/pemesanan/create', [PemesananController::class, 'create'])->name('pemesanan.create');
+Route::get('/pemesanan/success', [PemesananController::class, 'success'])->name('pemesanan.success');
+
 
 Route::get('/artikel', function () {
     return view('artikel');
