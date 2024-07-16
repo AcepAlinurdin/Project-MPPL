@@ -13,8 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('konveksi', function (Blueprint $table) {
-            
+        Schema::table('pemesanan', function (Blueprint $table) {
+            $table->string('name')->required();
+            $table->string('total_harga')->required();
         });
     }
 
@@ -25,8 +26,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('konveksi', function (Blueprint $table) {
-            //
+        Schema::table('pemesanan', function (Blueprint $table) {
+            $table->dropColumn('name');
+            $table->dropColumn('total_harga');
         });
     }
 };

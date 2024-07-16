@@ -24,5 +24,8 @@ class Pemesanan extends Model
         'city',
         'kecamatan',
         'kelurahan',
+        'bukti',
+        'name',
+        'total_harga',
     ];
 }

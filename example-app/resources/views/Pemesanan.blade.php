@@ -13,10 +13,11 @@
     @endif
     <form id="pemesananForm" action="{{ route('pemesanan.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
+        <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
         <div class="grid gap-6 mb-6 ml-5 mr-5">
             <div>
-                <label for="phone" class="block mb-2 text-sm font-extrabold text-gray-900 dark:text-white">No HP</label>
-                <input type="text" id="phone" name="phone"
+                <label for="no_hp" class="block mb-2 text-sm font-extrabold text-gray-900 dark:text-white">No HP</label>
+                <input type="text" id="no_hp" name="no_hp"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="085320XXXXX" required />
             </div>
@@ -58,7 +59,7 @@
                 </select>
             </div>
             <div>
-                <label for="jalan" class="block mb-2 text-sm font-extrabold text-gray-900 dark:text-white">Jalan</label>
+                <label for="jalan" class="block mb-2 mt-5 text-sm font-extrabold text-gray-900 dark:text-white">Jalan</label>
                 <input type="text" id="jalan" name="jalan"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="" required />
@@ -69,7 +70,7 @@
             </div>
 
             <div>
-                <label for="no_rumah" class="block mb-2 text-sm font-extrabold text-gray-900 dark:text-white">No
+                <label for="no_rumah" class="block mb-2 mt-5 text-sm font-extrabold text-gray-900 dark:text-white">No
                     Rumah</label>
                 <input type="tel" id="no_rumah" name="no_rumah"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -78,7 +79,7 @@
         </div>
         <div class="ml-5 mr-5">
             <div>
-                <label for="jenis_produk" class="block mb-2 text-sm font-extrabold text-gray-900 dark:text-white">Jenis
+                <label for="jenis_produk" class="block mb-2 mt-5 text-sm font-extrabold text-gray-900 dark:text-white">Jenis
                     Produk</label>
                 <select id="jenis_produk" name="jenis_produk" onchange="calculateTotal()"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -90,7 +91,7 @@
                 </select>
             </div>
             <div>
-                <label for="jenis_kain" class="block mb-2 text-sm font-extrabold text-gray-900 dark:text-white">Jenis
+                <label for="jenis_kain" class="block mb-2 mt-5 text-sm font-extrabold text-gray-900 dark:text-white">Jenis
                     Kain</label>
                 <select id="jenis_kain" name="jenis_kain" onchange="calculateTotal()"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -102,7 +103,7 @@
             </div>
             <div>
                 <label for="ukuran"
-                    class="block mb-2 text-sm font-extrabold text-gray-900 dark:text-white">Ukuran</label>
+                    class="block mb-2 mt-5 text-sm font-extrabold text-gray-900 dark:text-white">Ukuran</label>
                 <select id="ukuran" name="ukuran" onchange="calculateTotal()"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     <option selected disabled>Pilih ukuran anda</option>
@@ -118,13 +119,13 @@
             </div>
             <div>
                 <label for="jumlah_produk"
-                    class="block mb-2 text-sm font-extrabold text-gray-900 dark:text-white">Jumlah Produk</label>
+                    class="block mb-2 mt-5 text-sm font-extrabold text-gray-900 dark:text-white">Jumlah Produk</label>
                 <input type="number" id="jumlah_produk" name="jumlah_produk" onchange="calculateTotal()"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Masukkan jumlah produk" required />
             </div>
 
-            <label class="block mb-2 text-sm font-extrabold text-gray-900 dark:text-white " for="file_input">Upload
+            <label class="block mb-2 mt-5 text-sm font-extrabold text-gray-900 dark:text-white " for="file_input">Upload
                 file</label>
             <input type="file" name="upload_foto"
                 class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
@@ -136,25 +137,27 @@
                         pembuatan logo.</p>
                 </div>
                 <label for="deskripsi"
-                    class="block mb-2 text-sm font-extrabold text-gray-900 dark:text-white mt-5">Deskripsi</label>
+                    class="block text-sm font-extrabold text-gray-900 dark:text-white mt-5">Deskripsi</label>
                 <input type="text" id="deskripsi" name="deskripsi"
                     class="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-            </div>
-            <div>
-                <p class="mb-5 text-xs">Silahkan masukan desain logo yang ingin Anda gunakan. Apabila tidak mempunyai
+                    <p class="mb-5 text-xs">Silahkan masukan desain logo yang ingin Anda gunakan. Apabila tidak mempunyai
                     logo, silahkan cantumkan no WA di dalam deskripsi untuk request pembuatan logo.</p>
-            </div>
+                </div>
             <div>
                 <label for="total_harga" class="block mb-2 text-sm font-extrabold text-gray-900 dark:text-white">Total
                     Harga</label>
                 <input type="text" id="total_harga" name="total_harga" readonly
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
             </div>
+            <label class="block mb-2 mt-5 text-sm font-extrabold text-gray-900 dark:text-white " for="file_input">Upload Bukti Pembayaran</label>
+            <input type="file" name="bukti"
+                class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                id="file_input">
         </div>
         <div class="flex items-start mb-6">
+        <button type="submit" class="text-white mt-5 ml-5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ">Submit</button>
         </div>
-        <button type="submit"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+        
     </form>
     </div>
     <script>
@@ -202,13 +205,6 @@
             const toSelectElement = document.querySelector(`select[name="${to}"]`);
             toSelectElement.innerHTML = toItemElement;
         };
-
-        // document.getElementById('pemesananForm').addEventListener('submit', function (event) {
-        //     const checkboxes = document.querySelectorAll('input[name="ukuran_checkbox[]"]:checked');
-        //     const sizes = Array.from(checkboxes).map(checkbox => checkbox.value).join(',');
-        //     document.getElementById('ukuran').value = sizes;
-        // });
-
         document.addEventListener('DOMContentLoaded', function () {
             const hargaProduk = {
                 'T_shirt_LP': 100000,

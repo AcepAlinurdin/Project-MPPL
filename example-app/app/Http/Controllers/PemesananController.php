@@ -2,134 +2,138 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Pemesanan;
-use App\Models\Province;
-
+use App\Models\User;
+use Illuminate\Http\Request;
 
 class PemesananController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        // Placeholder for index method if needed
+        // Menampilkan daftar pemesanan
+        $pemesanans = Pemesanan::all();
+        return view('pemesanan', compact('pemesanans'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        $provinces = Province::all();
-        return view('pemesanan', compact('provinces'));
+        // Menampilkan form pemesanan
+        return view('pemesanan');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        try {
-            $validatedData = $request->validate([
-                'phone' => 'required|string',
-                'jalan' => 'required|string',
-                'no_rumah' => 'required|string',
-                'jenis_produk' => 'required|string',
-                'jenis_kain' => 'required|string',
-                'ukuran' => 'required|string',
-                'upload_foto' => 'required|file|mimes:jpg,png',
-                'deskripsi' => 'required|string',
-                'province' => 'required|string|max:255',
-                'city' => 'required|string|max:255',
-                'kecamatan' => 'required|string|max:255',
-                'kelurahan' => 'required|string|max:255',
-            ]);
+        // Validasi data input
+        $request->validate([
+            'no_hp' => 'required',
+            'province' => 'required',
+            'city' => 'required',
+            'kecamatan' => 'required',
+            'kelurahan' => 'required',
+            'jalan' => 'required',
+            'no_rumah' => 'required',
+            'jenis_produk' => 'required',
+            'jenis_kain' => 'required',
+            'ukuran' => 'required',
+            'jumlah_produk' => 'required|integer',
+            'deskripsi' => 'nullable',
+            'total_harga' => 'required',
+            'upload_foto' => 'nullable|file',
+            'bukti' => 'nullable|file',
+            'user_id' => 'required|exists:users,id'
+        ]);
 
-            $filePath = $request->file('upload_foto')->store('uploads', 'public');
+        // Ambil user berdasarkan user_id
+        $user = User::find($request->user_id);
 
-            $pemesanan = new Pemesanan();
-            $pemesanan->no_hp = $validatedData['phone'];
-            $pemesanan->jalan = $validatedData['jalan'];
-            $pemesanan->no_rumah = $validatedData['no_rumah'];
-            $pemesanan->jenis_produk = $validatedData['jenis_produk'];
-            $pemesanan->jenis_kain = $validatedData['jenis_kain'];
-            $pemesanan->ukuran = $validatedData['ukuran'];
-            $pemesanan->upload_foto = $filePath;
-            $pemesanan->deskripsi = $validatedData['deskripsi'];
-            $pemesanan->province = $validatedData['province'];
-            $pemesanan->city = $validatedData['city'];
-            $pemesanan->kecamatan = $validatedData['kecamatan'];
-            $pemesanan->kelurahan = $validatedData['kelurahan'];
+        // Simpan data ke tabel pemesanan
+        Pemesanan::create([
+            'no_hp' => $request->no_hp,
+            'province' => $request->province,
+            'city' => $request->city,
+            'kecamatan' => $request->kecamatan,
+            'kelurahan' => $request->kelurahan,
+            'jalan' => $request->jalan,
+            'no_rumah' => $request->no_rumah,
+            'jenis_produk' => $request->jenis_produk,
+            'jenis_kain' => $request->jenis_kain,
+            'ukuran' => $request->ukuran,
+            'jumlah_produk' => $request->jumlah_produk,
+            'deskripsi' => $request->deskripsi,
+            'total_harga' => $request->total_harga,
+            'upload_foto' => $request->file('upload_foto') ? $request->file('upload_foto')->store('uploads') : null,
+            'bukti' => $request->file('bukti') ? $request->file('bukti')->store('uploads') : null,
+            'user_id' => $request->user_id,
+            'name' => $user->name // Simpan nama user
+        ]);
 
-$pemesanan->save();
-
-            $pemesanan->save();
-
-            return redirect()->route('pemesanan.success')->with('success', 'Data berhasil disimpan.');
-        } catch (\Exception $e) {
-            return back()->withErrors(['error' => $e->getMessage()]);
-        }
+        return redirect()->route('pemesanan')->with('success', 'Pemesanan berhasil dibuat');
     }
 
-    public function success()
-    {
-        $pemesanan = Pemesanan::latest()->first(); // Contoh pengambilan data pemesanan terakhir, sesuaikan dengan kebutuhan Anda
-
-        return view('pemesanan_success', compact('pemesanan'));
-    }
-
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
-        // Placeholder for show method if needed
+        // Menampilkan detail pemesanan
+        $pemesanan = Pemesanan::find($id);
+        return view('pemesanan.show', compact('pemesanan'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        // Placeholder for edit method if needed
+        // Menampilkan form edit pemesanan
+        $pemesanan = Pemesanan::find($id);
+        return view('pemesanan.edit', compact('pemesanan'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
-        // Placeholder for update method if needed
+        // Validasi data input
+        $request->validate([
+            'no_hp' => 'required',
+            'province' => 'required',
+            'city' => 'required',
+            'kecamatan' => 'required',
+            'kelurahan' => 'required',
+            'jalan' => 'required',
+            'no_rumah' => 'required',
+            'jenis_produk' => 'required',
+            'jenis_kain' => 'required',
+            'ukuran' => 'required',
+            'jumlah_produk' => 'required|integer',
+            'deskripsi' => 'nullable',
+            'total_harga' => 'required',
+            'upload_foto' => 'nullable|file',
+            'bukti' => 'nullable|file'
+        ]);
+
+        // Ambil data pemesanan yang akan diupdate
+        $pemesanan = Pemesanan::find($id);
+
+        // Update data pemesanan
+        $pemesanan->update([
+            'np_hp' => $request->no_hp,
+            'province' => $request->province,
+            'city' => $request->city,
+            'kecamatan' => $request->kecamatan,
+            'kelurahan' => $request->kelurahan,
+            'jalan' => $request->jalan,
+            'no_rumah' => $request->no_rumah,
+            'jenis_produk' => $request->jenis_produk,
+            'jenis_kain' => $request->jenis_kain,
+            'ukuran' => $request->ukuran,
+            'jumlah_produk' => $request->jumlah_produk,
+            'deskripsi' => $request->deskripsi,
+            'total_harga' => $request->total_harga,
+            'upload_foto' => $request->file('upload_foto') ? $request->file('upload_foto')->store('uploads') : $pemesanan->upload_foto,
+            'bukti' => $request->file('bukti') ? $request->file('bukti')->store('uploads') : $pemesanan->bukti
+        ]);
+
+        return redirect()->route('pemesanan')->with('success', 'Pemesanan berhasil diupdate');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-
+        // Hapus pemesanan
+        Pemesanan::destroy($id);
+        return redirect()->route('pemesanan')->with('success', 'Pemesanan berhasil dihapus');
     }
 }
