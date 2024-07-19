@@ -12,8 +12,9 @@ class PemesananController extends Controller
     {
         // Menampilkan daftar pemesanan
         $pemesanans = Pemesanan::all();
-        return view('pemesanan', compact('pemesanans'));
+        return view('admin', compact('pemesanans'));
     }
+    
 
     public function create()
     {
@@ -61,8 +62,8 @@ class PemesananController extends Controller
             'jumlah_produk' => $request->jumlah_produk,
             'deskripsi' => $request->deskripsi,
             'total_harga' => $request->total_harga,
-            'upload_foto' => $request->file('upload_foto') ? $request->file('upload_foto')->store('uploads') : null,
-            'bukti' => $request->file('bukti') ? $request->file('bukti')->store('uploads') : null,
+            'upload_foto' => $request->file('upload_foto') ? $request->file('upload_foto')->store('uploads', 'public') : null,
+            'bukti' => $request->file('bukti') ? $request->file('bukti')->store('uploads', 'public') : null,
             'user_id' => $request->user_id,
             'name' => $user->name // Simpan nama user
         ]);

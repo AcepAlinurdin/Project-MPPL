@@ -36,6 +36,7 @@ Route::get('/pemesanan/create', [PemesananController::class, 'create'])->name('p
 Route::get('/pemesanan/success', [PemesananController::class, 'success'])->name('pemesanan.success');
 
 
+
 Route::get('/artikel', function () {
     return view('artikel');
 })->middleware(['auth', 'verified'])->name('artikel');
@@ -44,3 +45,5 @@ Route::get('/admin', function () {
     return view('admin');
 })->middleware(['auth', 'verified'])->name('admin');
 require __DIR__.'/auth.php';
+
+Route::get('/admin', [PemesananController::class, 'index']);

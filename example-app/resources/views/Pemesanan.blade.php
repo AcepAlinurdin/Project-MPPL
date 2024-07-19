@@ -17,7 +17,7 @@
         <div class="grid gap-6 mb-6 ml-5 mr-5">
             <div>
                 <label for="no_hp" class="block mb-2 text-sm font-extrabold text-gray-900 dark:text-white">No HP</label>
-                <input type="text" id="no_hp" name="no_hp"
+                <input type="number" id="no_hp" name="no_hp"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="085320XXXXX" required />
             </div>
