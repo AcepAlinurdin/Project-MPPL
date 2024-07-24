@@ -13,6 +13,13 @@ class PemesananController extends Controller
         // Menampilkan daftar pemesanan
         $pemesanans = Pemesanan::all();
         return view('admin', compact('pemesanans'));
+
+    }
+    public function Pembayaran()
+    {
+        // Menampilkan daftar pemesanan
+        $pemesanans = Pemesanan::all();
+        return view('bukti_pembayaran', compact('pemesanans'));
     }
     
 

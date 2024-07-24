@@ -10,8 +10,8 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
+| routes are loaded by the RouteServiceProvider and all of them
+| will be assigned to the "web" middleware group. Make something great!
 |
 */
 
@@ -19,31 +19,38 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+// Dashboard route for authenticated users
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+// Authenticated routes
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // Pemesanan routes
+    Route::get('/pemesanan', [PemesananController::class, 'create'])->name('pemesanan');
+    Route::post('/pemesanan', [PemesananController::class, 'store'])->name('pemesanan.store');
+    Route::get('/pemesanan/create', [PemesananController::class, 'create'])->name('pemesanan.create');
+    Route::get('/pemesanan/success', [PemesananController::class, 'success'])->name('pemesanan.success');
+    
+    // Artikel route
+    Route::get('/artikel', function () {
+        return view('artikel');
+    })->name('artikel');
+
+    // Pembayaran route
+    Route::get('/Pembayaran', [PemesananController::class, 'Pembayaran'])->name('bukti_pembayaran');
 });
 
-Route::get('/pemesanan', [PemesananController::class,'create'])->middleware(['auth', 'verified'])->name('pemesanan');
-Route::post('/pemesanan', [PemesananController::class, 'store'])->name('pemesanan.store');
-Route::get('/pemesanan/create', [PemesananController::class, 'create'])->name('pemesanan.create');
-Route::get('/pemesanan/success', [PemesananController::class, 'success'])->name('pemesanan.success');
+// Menambahkan rute untuk menampilkan daftar pemesanan
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admin', [PemesananController::class, 'index'])->name('admin');
+});
 
 
 
-Route::get('/artikel', function () {
-    return view('artikel');
-})->middleware(['auth', 'verified'])->name('artikel');
-
-Route::get('/admin', function () {
-    return view('admin');
-})->middleware(['auth', 'verified'])->name('admin');
+// Default authentication routes
 require __DIR__.'/auth.php';
-
-Route::get('/admin', [PemesananController::class, 'index']);
