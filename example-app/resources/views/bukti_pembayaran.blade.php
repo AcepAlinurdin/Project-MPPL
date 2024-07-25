@@ -83,32 +83,37 @@
     </div>
     </aside>
     
-
-<div class="container mx-auto p-4 ml- ">
-<div class="flex flex-wrap gap-4 ml-72 mt-7">
+    <div class="container mx-auto p-4 ml-72 mt-7">
+        <div class="flex flex-wrap gap-4">
             @foreach($pemesanans as $pemesanan)
-                <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                     <a href="#">
-                    <img class="rounded-t-lg" src="{{ asset('storage/' . $pemesanan->bukti) }}" alt="{{ $pemesanan->name }}" />
-
+                    <img class="rounded-t-lg" src="{{ asset('storage/bukti/' . $pemesanan->bukti) }}" alt="{{ $pemesanan->name }}" />
 
                     </a>
-                    <div class="p-5">
+                    <div class="p-5 flex flex-col justify-between h-full">
                         <a href="#">
                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $pemesanan->name }}</h5>
                         </a>
-                        
-                        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            Read more
-                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                            </svg>
-                        </a>
+                        <div class="flex space-x-2 mt-auto">
+                        <form action="{{ route('pemesanan.updateStatus', $pemesanan->id) }}" method="POST">
+    @csrf
+    <input type="hidden" name="status" value="diterima">
+    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tandai Diterima</button>
+</form>
+
+<form action="{{ route('pemesanan.updateStatus', $pemesanan->id) }}" method="POST">
+    @csrf
+    <input type="hidden" name="status" value="dibatalkan">
+    <button type="submit" class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">Tandai Dibatalkan</button>
+</form>
+                        </div>
                     </div>
                 </div>
             @endforeach
         </div>
     </div>
+    
 </body>
 
 </html>

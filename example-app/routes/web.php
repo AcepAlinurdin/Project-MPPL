@@ -35,11 +35,14 @@ Route::middleware('auth')->group(function () {
     Route::post('/pemesanan', [PemesananController::class, 'store'])->name('pemesanan.store');
     Route::get('/pemesanan/create', [PemesananController::class, 'create'])->name('pemesanan.create');
     Route::get('/pemesanan/success', [PemesananController::class, 'success'])->name('pemesanan.success');
+    // Route::get('/pemesanan', [PemesananController::class, 'index'])->name('pemesanan');
     
     // Artikel route
     Route::get('/artikel', function () {
         return view('artikel');
     })->name('artikel');
+    
+    Route::get('/notifikasi', [PemesananController::class, 'index2'])->name('notifikasi');
 
     // Pembayaran route
     Route::get('/Pembayaran', [PemesananController::class, 'Pembayaran'])->name('bukti_pembayaran');
@@ -51,6 +54,8 @@ Route::middleware(['auth', 'admin'])->group(function () {
 });
 
 
+// web.php
+Route::post('/pemesanan/update-status/{id}', [PemesananController::class, 'updateStatus'])->name('pemesanan.updateStatus');
 
 // Default authentication routes
 require __DIR__.'/auth.php';
