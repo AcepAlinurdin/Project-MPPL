@@ -1,31 +1,31 @@
 <x-app-layout>
     <div id="default-carousel" class="relative w-full" data-carousel="slide">
         <!-- Carousel wrapper -->
-        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+        <div class="relative h-56 md:h-96 overflow-hidden rounded-lg">
             <!-- Item 1 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('/example-app/public/images/baju.jpg') }}"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Baju">
+            <div class="hidden duration-700 ease-in-out md:block" data-carousel-item>
+                <img src="{{ asset('images/ruangan (1).jpg') }}" class="absolute block w-full h-full object-cover"
+                    alt="Baju">
             </div>
             <!-- Item 2 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('images/baju.jpg') }}"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Baju">
+            <div class="hidden duration-700 ease-in-out md:block" data-carousel-item>
+                <img src="{{ asset('images/ruangan (2).jpg') }}" class="absolute block w-full h-full object-cover"
+                    alt="Baju">
             </div>
             <!-- Item 3 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('images/baju.jpg') }}"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Baju">
+            <div class="hidden duration-700 ease-in-out md:block" data-carousel-item>
+                <img src="{{ asset('images/ruangan (3).jpg') }}" class="absolute block w-full h-full object-cover"
+                    alt="Baju">
             </div>
             <!-- Item 4 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('images/baju.jpg') }}"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Baju">
+            <div class="hidden duration-700 ease-in-out md:block" data-carousel-item>
+                <img src="{{ asset('images/ruangan (4).jpg') }}" class="absolute block w-full h-full object-cover"
+                    alt="Baju">
             </div>
             <!-- Item 5 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('images/baju.jpg') }}"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Baju">
+            <div class="hidden duration-700 ease-in-out md:block" data-carousel-item>
+                <img src="{{ asset('images/ruangan (5).jpg') }}" class="absolute block w-full h-full object-cover"
+                    alt="Baju">
             </div>
         </div>
         <!-- Slider indicators -->
@@ -71,121 +71,142 @@
     </div>
 
     <div>
-        <p type="" class="font-bold text-center mt-7 text-2xl mb-5">Tentang kami</p>
+        <p class="font-bold text-center mt-7 text-2xl mb-5">Tentang kami</p>
     </div>
     <div>
-        <p class="ml-10 mr-10 text-center ">
+        <p class="px-5 text-center">
+            Konveksi AR Production adalah penyedia pakaian berkualitas tinggi, mengkhususkan diri dalam pembuatan
+            T-shirt dan kemeja PDH. Kami menawarkan berbagai pilihan seperti T-shirt lengan pendek, lengan panjang,
+            serta kemeja PDH lengan pendek dan panjang, yang semuanya terbuat dari bahan katun atau sintetis terbaik.
 
-Konveksi AR Production adalah penyedia pakaian berkualitas tinggi, mengkhususkan diri dalam pembuatan T-shirt dan kemeja PDH. Kami menawarkan berbagai pilihan seperti T-shirt lengan pendek, lengan panjang, serta kemeja PDH lengan pendek dan panjang, yang semuanya terbuat dari bahan katun atau sintetis terbaik.
+            Produk kami dirancang untuk kenyamanan dan profesionalisme, dilengkapi dengan kancing, kerah, dan saku. Kami
+            memahami pentingnya penampilan yang rapi dan profesional, sehingga setiap detail dipikirkan dengan cermat
+            untuk memberikan pengalaman terbaik bagi pelanggan.
 
-Produk kami dirancang untuk kenyamanan dan profesionalisme, dilengkapi dengan kancing, kerah, dan saku. Kami memahami pentingnya penampilan yang rapi dan profesional, sehingga setiap detail dipikirkan dengan cermat untuk memberikan pengalaman terbaik bagi pelanggan.
-
-Kami siap melayani kebutuhan pakaian dalam jumlah besar maupun kecil, dengan kemampuan menyesuaikan produk sesuai permintaan khusus. Dengan tim yang berpengalaman, kami berkomitmen untuk terus berinovasi dan meningkatkan kualitas layanan dan produk kami. Terima kasih telah mempercayakan kebutuhan pakaian Anda kepada Konveksi AR Production. <eveniet class="lore"></eveniet>
+            Kami siap melayani kebutuhan pakaian dalam jumlah besar maupun kecil, dengan kemampuan menyesuaikan produk
+            sesuai permintaan khusus. Dengan tim yang berpengalaman, kami berkomitmen untuk terus berinovasi dan
+            meningkatkan kualitas layanan dan produk kami. Terima kasih telah mempercayakan kebutuhan pakaian Anda
+            kepada Konveksi AR Production.
         </p>
     </div>
 
     <div>
-        <p type="" class="font-bold text-center mt-7 text-2xl">Produk kami</p>
+        <p class="font-bold text-center mt-7 text-2xl">Produk kami</p>
     </div>
     <div class="flex flex-wrap">
-    <div class="w-1/4 p-4">
-        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-                <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        T-Shirt Lengan Pendek
-                    </h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                T-shirt lengan pendek adalah pakaian kasual dengan lengan setengah panjang. Terbuat dari katun atau bahan sintetis, tanpa kancing atau kerah, dan sering dihiasi dengan berbagai cetakan. Nyaman dan serbaguna untuk aktivitas sehari-hari.
-                </p>
-               
-            </div>
-        </div>
-    </div>
-    <div class="w-1/4 p-4">
-        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-                <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        T-shirt Lengan Panjang
-                    </h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                T-shirt lengan panjang adalah pakaian kasual dengan lengan penuh. Terbuat dari katun atau bahan sintetis, tanpa kancing atau kerah, dan sering dihiasi dengan berbagai cetakan. Nyaman dan serbaguna untuk aktivitas sehari-hari.
-                </p>
-               
-            </div>
-        </div>
-    </div>
-    <div class="w-1/4 p-4">
-        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-                <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Kemeja PDH Lengan Pendek
-                    </h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                Kemeja PDH lengan pendek adalah seragam formal dengan lengan setengah panjang. Terbuat dari katun atau bahan sintetis, memiliki kancing dan kerah, serta sering dilengkapi dengan saku. Nyaman dan rapi untuk aktivitas profesional.
-                </p>
-               
-            </div>
-        </div>
-    </div>
-    <div class="w-1/4 p-4">
-        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-                <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Kemeja PDH Lengan Panjang                    </h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                Kemeja PDH lengan panjang adalah seragam formal dengan lengan penuh. Terbuat dari katun atau bahan sintetis, memiliki kancing dan kerah, serta sering dilengkapi dengan saku. Nyaman dan rapi untuk aktivitas profesional.
-                </p>
-               
-            </div>
-        </div>
-    </div>
-    <div class="w-1/4 p-4">
-    </div>
-</div>
-
-    <div>
-        <p type="" class="font-bold text-center mt-7 text-2xl">Apa yang berbeda dari kami?</p>
-    </div>
-    <div>
-    <div class="flex h-screen">
-        <div class="w-1/2 ml-5">
-            <div class="bg-red-500 h-full p-6 text-center">Kolom 1</div>
-        </div>
-        <div class="w-1/2 flex flex-col mr-5">
-            <div class="flex-1 flex">
-                <div class="w-1/2 ">
-                    <div class="bg-blue-500 h-full  text-center">Kolom 1 di Baris 1 di Kolom 2</div>
-                </div>
-                <div class="w-1/2 ">
-                    <div class="bg-green-500 h-full text-center">Kolom 2 di Baris 1 di Kolom 2</div>
+        <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+            <div
+                class="bg-white border border-gray-200 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl dark:bg-gray-800 dark:border-gray-700">
+                <img class="w-full h-96 object-cover rounded-t-lg" src="{{ asset('images/satu (1).png') }}" alt="" />
+                <div class="p-4">
+                    <h5 class="mb-1 text-xl font-bold tracking-tight text-gray-900 dark:text-white">T-Shirt Lengan
+                        Pendek</h5>
+                    <p class="text-sm font-normal text-gray-700 dark:text-gray-400">
+                        T-shirt lengan pendek adalah pakaian kasual dengan lengan setengah panjang. Terbuat dari katun
+                        atau bahan sintetis, tanpa kancing atau kerah, dan sering dihiasi dengan berbagai cetakan.
+                        Nyaman dan serbaguna.
+                    </p>
                 </div>
             </div>
-            <div class="flex-1 ">
-                <div class="bg-yellow-500 h-full  text-center">Baris 2 di Kolom 2</div>
+        </div>
+        <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+            <div
+                class="bg-white border border-gray-200 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl dark:bg-gray-800 dark:border-gray-700">
+                <img class="w-full h-96 object-cover rounded-t-lg" src="{{ asset('images/satu (2).png') }}" alt="" />
+                </a>
+                <div class="p-4">
+                    <h5 class="mb-1 text-xl font-bold tracking-tight text-gray-900 dark:text-white">T-Shirt Lengan
+                        Panjang</h5>
+                    <p class="text-sm font-normal text-gray-700 dark:text-gray-400">
+                        T-shirt lengan panjang adalah pakaian kasual dengan lengan penuh. Terbuat dari katun atau bahan
+                        sintetis, tanpa kancing atau kerah, dan sering dihiasi dengan berbagai cetakan. Nyaman dan
+                        serbaguna untuk aktivitas sehari-hari.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+            <div
+                class="bg-white border border-gray-200 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl dark:bg-gray-800 dark:border-gray-700">
+
+                <img class="w-full h-96 object-cover rounded-t-lg" src="{{ asset('images/satu (4).png') }}" alt="" />
+
+                <div class="p-4">
+
+                    <h5 class="mb-1 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Kemeja PDH Lengan
+                        Pendek</h5>
+
+                    <p class="text-sm font-normal text-gray-700 dark:text-gray-400">
+                        Kemeja PDH lengan pendek adalah seragam formal dengan lengan setengah panjang. Terbuat dari
+                        katun atau bahan sintetis, memiliki kancing dan kerah, serta sering dilengkapi dengan saku.
+                        Nyaman dan rapi untuk aktivitas profesional.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="w-full sm:w-1/2 md:w-1/4 p-4">
+            <div
+                class="bg-white border border-gray-200 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl dark:bg-gray-800 dark:border-gray-700">
+                <img class="w-full h-96 object-cover rounded-t-lg" src="{{ asset('images/satu (3).png') }}" alt="" />
+                </a>
+                <div class="p-4">
+
+                    <h5 class="mb-1 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Kemeja PDH Lengan
+                        Panjang</h5>
+
+                    <p class="text-sm font-normal text-gray-700 dark:text-gray-400">
+                        Kemeja PDH lengan panjang adalah seragam formal dengan lengan penuh. Terbuat dari katun atau
+                        bahan sintetis, memiliki kancing dan kerah, serta sering dilengkapi dengan saku. Nyaman dan rapi
+                        untuk aktivitas profesional.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
+
+
+    <div>
+        <p class="font-bold text-center mt-7 text-2xl">Apa yang berbeda dari kami?</p>
+    </div>
+    <div class="flex flex-col md:flex-row">
+        <div class="w-full md:w-1/2 p-4 flex flex-col">
+            <div class="flex-1 p-2">
+                <div class="bg-white h-full p-6 text-center shadow-lg rounded-2xl"
+                    style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 9px;">
+                    <p class="text-black  font-bold text-xl">Kualitas Bahan Terbaik</p>
+                    <p class="text-black mt-2">AR Production hanya menggunakan bahan-bahan berkualitas tinggi yang tahan
+                        lama dan nyaman dipakai, memastikan kepuasan pelanggan kami.</p>
+                </div>
+            </div>
+            <div class="flex-1 p-2">
+                <div class="bg-white h-full p-6 text-center shadow-lg rounded-2xl"
+                    style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 9px;">
+                    <p class="text-black font-bold text-xl">Desain Kreatif dan Inovatif</p>
+                    <p class="text-black mt-2">Tim desain kami selalu mengikuti tren terbaru dan menghadirkan desain
+                        yang unik dan inovatif untuk setiap produk konveksi kami.</p>
+                </div>
+            </div>
+        </div>
+        <div class="w-full md:w-1/2 p-4 flex flex-col">
+            <div class="flex-1 p-2">
+                <div class="bg-white h-full p-6 text-center shadow-lg rounded-2xl"
+                    style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 9px;">
+                    <p class="text-black  font-bold text-xl">Harga Kompetitif</p>
+                    <p class="text-black mt-2">Kami menawarkan harga yang sangat kompetitif tanpa mengorbankan kualitas,
+                        memastikan produk kami dapat dijangkau oleh berbagai kalangan.</p>
+                </div>
+            </div>
+            <div class="flex-1 p-2">
+                <div class="bg-white h-full p-6 text-center shadow-lg rounded-2xl"
+                    style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 9px;">
+                    <p class="text-black  font-bold text-xl">Pelayanan Pelanggan Terbaik</p>
+                    <p class="text-black mt-2">Kami selalu mengutamakan kepuasan pelanggan dengan memberikan layanan
+                        pelanggan yang responsif dan ramah, siap membantu kapan saja.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
+    </div>
 
 </x-app-layout>

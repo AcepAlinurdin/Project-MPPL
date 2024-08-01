@@ -1,244 +1,122 @@
 <x-app-layout>
-<div class="max-w-sm w-full lg:max-w-full lg:flex p-5">
-  <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('/images/baju.jpg')" title="Woman holding a mug">
-  </div>
-  <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-    <div class="mb-8">
-      <p class="text-sm text-gray-600 flex items-center">
-        <svg class="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-          <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
-        </svg>
-        Members only
-      </p>
-      <div class="text-gray-900 font-bold text-xl mb-2">Can coffee make you a better developer?</div>
-      <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+<div class="max-w-sm w-auto lg:max-w-full lg:flex p-5">
+  <a href="https://medium.com/@wahyudimaulana1205/pengenalan-dari-berbagai-jenis-bahan-bahan-yang-digunakan-pada-pakaian-b125969f3584" class="no-underline hover:no-underline">
+    <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('/images/baju.jpg')" title="Woman holding a mug">
     </div>
-    <div class="flex items-center">
-      <img class="w-10 h-10 rounded-full mr-4" src="{{ asset('images/baju.jpg') }}" alt="Avatar of Jonathan Reinink">
-      <div class="text-sm">
-        <p class="text-gray-900 leading-none">Jonathan Reinink</p>
-        <p class="text-gray-600">Aug 18</p>
+    <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+      <div class="mb-8">
+        <div class="text-gray-900 font-bold text-xl mb-2">Pengenalan dari berbagai jenis bahan — bahan yang digunakan pada pakaian</div>
+        <p class="text-gray-700 text-base">Pakaian adalah salah satu kebutuhan dasar manusia selain pangan dan papan. Seiring dengan perkembangan peradaban manusia, pakaian telah mengalami transformasi yang signifikan dalam hal fungsi, bahan, dan gaya. Awalnya, pakaian digunakan untuk melindungi tubuh dari cuaca ekstrem dan bahaya lingkungan. Namun, seiring berjalannya waktu, pakaian juga menjadi simbol identitas, status sosial, dan ekspresi budaya.</p>
+      </div>
+      <div class="flex items-center">
+       
+        <div class="text-sm">
+          <p class="text-gray-900 leading-none">Wahyudi Maulana</p>
+          <p class="text-gray-600">July 31</p>
+        </div>
       </div>
     </div>
-  </div>
+  </a>
 </div>
 
-<div class="max-w-sm w-full lg:max-w-full lg:flex p-5">
-  <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('/images/baju.jpg')" title="Woman holding a mug">
-  </div>
-  <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-    <div class="mb-8">
-      <p class="text-sm text-gray-600 flex items-center">
-        <svg class="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-          <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
-        </svg>
-        Members only
-      </p>
-      <div class="text-gray-900 font-bold text-xl mb-2">Can coffee make you a better developer?</div>
-      <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+<div class="max-w-sm w-auto lg:max-w-full lg:flex p-5">
+  <a href="https://medium.com/@wahyudimaulana1205/tips-jitu-untuk-membuat-pakaian-tetap-awet-dan-tahan-lama-f92faa21d677" class="no-underline hover:no-underline">
+    <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('/images/baju.jpg')" title="Woman holding a mug">
     </div>
-    <div class="flex items-center">
-      <img class="w-10 h-10 rounded-full mr-4" src="{{ asset('images/baju.jpg') }}" alt="Avatar of Jonathan Reinink">
-      <div class="text-sm">
-        <p class="text-gray-900 leading-none">Jonathan Reinink</p>
-        <p class="text-gray-600">Aug 18</p>
+    <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+      <div class="mb-8">
+        <div class="text-gray-900 font-bold text-xl mb-2">Tips Jitu Untuk Membuat Pakaian Tetap Awet dan Tahan Lama</div>
+        <p class="text-gray-700 text-base">Pakaian sudah menjadi bagian dari tubuh kita yang dimana setiap bentuknya mewakili fungsi yang seharusnya, seperti melindungi tubuh kita dari ancaman luar seperti sinar matahari secara langsung maupun benda — benda yang berbahaya, menjaga tubuh kita dari suhu dingin, mempercantik tubuh kita dengan style yang bagus dan bahkan mampu membuat kita tampil dengan penuh gaya.</p>
+      </div>
+      <div class="flex items-center">
+        
+        <div class="text-sm">
+          <p class="text-gray-900 leading-none">Wahyudi Maulana</p>
+          <p class="text-gray-600">Augs 1</p>
+        </div>
       </div>
     </div>
-  </div>
+  </a>
 </div>
 
-<div class="max-w-sm w-full lg:max-w-full lg:flex p-5">
-  <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('/images/baju.jpg')" title="Woman holding a mug">
-  </div>
-  <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-    <div class="mb-8">
-      <p class="text-sm text-gray-600 flex items-center">
-        <svg class="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-          <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
-        </svg>
-        Members only
-      </p>
-      <div class="text-gray-900 font-bold text-xl mb-2">Can coffee make you a better developer?</div>
-      <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+<div class="max-w-sm w-auto lg:max-w-full lg:flex p-5">
+  <a href="https://medium.com/@wahyudimaulana1205/panduan-memilih-pakaian-berkualitas-aspek-aspek-penting-untuk-kenyamanan-dan-gaya-9a498652161e" class="no-underline hover:no-underline">
+    <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('/images/baju.jpg')" title="Woman holding a mug">
     </div>
-    <div class="flex items-center">
-      <img class="w-10 h-10 rounded-full mr-4" src="{{ asset('images/baju.jpg') }}" alt="Avatar of Jonathan Reinink">
-      <div class="text-sm">
-        <p class="text-gray-900 leading-none">Jonathan Reinink</p>
-        <p class="text-gray-600">Aug 18</p>
+    <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+      <div class="mb-8">
+        <div class="text-gray-900 font-bold text-xl mb-2">Panduan Memilih Pakaian Berkualitas: Aspek-aspek Penting untuk Kenyamanan dan Gaya</div>
+        <p class="text-gray-700 text-base"> Kebanyakan baju yang memiliki kualitas yang bagus tentu harganya menjadi lebih mahal, sangat penting untuk memastikan bahwa harga tersebut sesuai dengan kualitas yang di berikan istilahnya ‘ada harga ada kualitas’. Namun, ada juga beberapa harga tinggi tidak selalu berkualitas. Jadi pilihlah pakaian dengan bijak agar tidak tertipu dengan harga pasar.</p>
+      </div>
+      <div class="flex items-center">
+        <div class="text-sm">
+          <p class="text-gray-900 leading-none">Wahyudi Maulana</p>
+          <p class="text-gray-600">Augs 1</p>
+        </div>
       </div>
     </div>
-  </div>
+  </a>
 </div>
 
-<div class="max-w-sm w-full lg:max-w-full lg:flex  p-5">
-  <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('/images/baju.jpg')" title="Woman holding a mug">
-  </div>
-  <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-    <div class="mb-8">
-      <p class="text-sm text-gray-600 flex items-center">
-        <svg class="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-          <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
-        </svg>
-        Members only
-      </p>
-      <div class="text-gray-900 font-bold text-xl mb-2">Can coffee make you a better developer?</div>
-      <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+<div class="max-w-sm w-auto lg:max-w-full lg:flex p-5">
+  <a href="https://konveksibandungar.blogspot.com/2024/07/tren-outfit-kekinian-tahun-2024-yang.html" class="no-underline hover:no-underline">
+    <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('/images/baju.jpg')" title="Woman holding a mug">
     </div>
-    <div class="flex items-center">
-      <img class="w-10 h-10 rounded-full mr-4" src="{{ asset('images/baju.jpg') }}" alt="Avatar of Jonathan Reinink">
-      <div class="text-sm">
-        <p class="text-gray-900 leading-none">Jonathan Reinink</p>
-        <p class="text-gray-600">Aug 18</p>
+    <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+      <div class="mb-8">
+        <div class="text-gray-900 font-bold text-xl mb-2">Tren Outfit Kekinian Tahun 2024 yang Wajib Kamu Coba</div>
+        <p class="text-gray-700 text-base">Tahun 2024 menghadirkan berbagai tren fashion yang menarik dan inovatif. Dari gaya minimalis hingga penggunaan warna-warna berani, inilah beberapa tren outfit kekinian yang bisa menjadi inspirasi untuk penampilanmu.</p>
+      </div>
+      <div class="flex items-center">
+       
+        <div class="text-sm">
+          <p class="text-gray-900 leading-none">Satria Bakti Kusuma</p>
+          <p class="text-gray-600">July 29</p>
+        </div>
       </div>
     </div>
-  </div>
+  </a>
 </div>
 
-<div class="max-w-sm w-full lg:max-w-full lg:flex p-5">
-  <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('/images/baju.jpg')" title="Woman holding a mug">
-  </div>
-  <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-    <div class="mb-8">
-      <p class="text-sm text-gray-600 flex items-center">
-        <svg class="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-          <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
-        </svg>
-        Members only
-      </p>
-      <div class="text-gray-900 font-bold text-xl mb-2">Can coffee make you a better developer?</div>
-      <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+<div class="max-w-sm w-auto lg:max-w-full lg:flex p-5">
+  <a href="https://konveksibandungar.blogspot.com/2024/07/tips-merawat-pakaian-agar-tahan-lama.html" class="no-underline hover:no-underline">
+    <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('/images/baju.jpg')" title="Woman holding a mug">
     </div>
-    <div class="flex items-center">
-      <img class="w-10 h-10 rounded-full mr-4" src="{{ asset('images/baju.jpg') }}" alt="Avatar of Jonathan Reinink">
-      <div class="text-sm">
-        <p class="text-gray-900 leading-none">Jonathan Reinink</p>
-        <p class="text-gray-600">Aug 18</p>
+    <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+      <div class="mb-8">
+        <div class="text-gray-900 font-bold text-xl mb-2">Tips Merawat Pakaian Agar Tahan Lama dan Tetap Terlihat Baru</div>
+        <p class="text-gray-700 text-base">Pakaian adalah bagian penting dari penampilan kita sehari-hari. Dengan perawatan yang tepat, pakaian bisa bertahan lama dan tetap terlihat baru. Berikut adalah beberapa tips yang bisa Anda terapkan untuk merawat pakaian Anda.
+
+</p>
+      </div>
+      <div class="flex items-center">
+        <div class="text-sm">
+          <p class="text-gray-900 leading-none">Satria Bakti Kusuma</p>
+          <p class="text-gray-600">July 30</p>
+        </div>
       </div>
     </div>
-  </div>
+  </a>
 </div>
 
-<div class="max-w-sm w-full lg:max-w-full lg:flex p-5">
-  <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('/images/baju.jpg')" title="Woman holding a mug">
-  </div>
-  <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-    <div class="mb-8">
-      <p class="text-sm text-gray-600 flex items-center">
-        <svg class="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-          <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
-        </svg>
-        Members only
-      </p>
-      <div class="text-gray-900 font-bold text-xl mb-2">Can coffee make you a better developer?</div>
-      <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+<div class="max-w-sm w-auto lg:max-w-full lg:flex p-5">
+  <a href="https://konveksibandungar.blogspot.com/2024/07/10-bahan-kain-yang-cocok-untuk-berbagai.html" class="no-underline hover:no-underline">
+    <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('/images/baju.jpg')" title="Woman holding a mug">
     </div>
-    <div class="flex items-center">
-      <img class="w-10 h-10 rounded-full mr-4" src="{{ asset('images/baju.jpg') }}" alt="Avatar of Jonathan Reinink">
-      <div class="text-sm">
-        <p class="text-gray-900 leading-none">Jonathan Reinink</p>
-        <p class="text-gray-600">Aug 18</p>
+    <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+      <div class="mb-8">
+        <div class="text-gray-900 font-bold text-xl mb-2">10 Bahan Kain yang Cocok untuk Berbagai Jenis Pakaian</div>
+        <p class="text-gray-700 text-base">Memilih bahan kain yang tepat adalah kunci untuk mendapatkan pakaian yang nyaman, tahan lama, dan sesuai dengan fungsinya. Berikut ini adalah beberapa jenis bahan kain yang cocok untuk berbagai jenis pakaian:</p>
+      </div>
+      <div class="flex items-center">
+        <div class="text-sm">
+          <p class="text-gray-900 leading-none">Satria Bakti Kusuma</p>
+          <p class="text-gray-600">Juli 29</p>
+        </div>
       </div>
     </div>
-  </div>
+  </a>
 </div>
 
-
-<div class="max-w-sm w-full lg:max-w-full lg:flex p-5">
-  <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('/images/baju.jpg')" title="Woman holding a mug">
-  </div>
-  <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-    <div class="mb-8">
-      <p class="text-sm text-gray-600 flex items-center">
-        <svg class="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-          <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
-        </svg>
-        Members only
-      </p>
-      <div class="text-gray-900 font-bold text-xl mb-2">Can coffee make you a better developer?</div>
-      <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
-    </div>
-    <div class="flex items-center">
-      <img class="w-10 h-10 rounded-full mr-4" src="{{ asset('images/baju.jpg') }}" alt="Avatar of Jonathan Reinink">
-      <div class="text-sm">
-        <p class="text-gray-900 leading-none">Jonathan Reinink</p>
-        <p class="text-gray-600">Aug 18</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="max-w-sm w-full lg:max-w-full lg:flex p-5">
-  <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('/images/baju.jpg')" title="Woman holding a mug">
-  </div>
-  <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-    <div class="mb-8">
-      <p class="text-sm text-gray-600 flex items-center">
-        <svg class="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-          <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
-        </svg>
-        Members only
-      </p>
-      <div class="text-gray-900 font-bold text-xl mb-2">Can coffee make you a better developer?</div>
-      <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
-    </div>
-    <div class="flex items-center">
-      <img class="w-10 h-10 rounded-full mr-4" src="{{ asset('images/baju.jpg') }}" alt="Avatar of Jonathan Reinink">
-      <div class="text-sm">
-        <p class="text-gray-900 leading-none">Jonathan Reinink</p>
-        <p class="text-gray-600">Aug 18</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="max-w-sm w-full lg:max-w-full lg:flex mt-5 p-5">
-  <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('/images/baju.jpg')" title="Woman holding a mug">
-  </div>
-  <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-    <div class="mb-8">
-      <p class="text-sm text-gray-600 flex items-center">
-        <svg class="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-          <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
-        </svg>
-        Members only
-      </p>
-      <div class="text-gray-900 font-bold text-xl mb-2">Can coffee make you a better developer?</div>
-      <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
-    </div>
-    <div class="flex items-center">
-      <img class="w-10 h-10 rounded-full mr-4" src="{{ asset('images/baju.jpg') }}" alt="Avatar of Jonathan Reinink">
-      <div class="text-sm">
-        <p class="text-gray-900 leading-none">Jonathan Reinink</p>
-        <p class="text-gray-600">Aug 18</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="max-w-sm w-full lg:max-w-full lg:flex  p-5">
-  <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('/images/baju.jpg')" title="Woman holding a mug">
-  </div>
-  <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-    <div class="mb-8">
-      <p class="text-sm text-gray-600 flex items-center">
-        <svg class="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-          <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
-        </svg>
-        Members only
-      </p>
-      <div class="text-gray-900 font-bold text-xl mb-2">Can coffee make you a better developer?</div>
-      <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
-    </div>
-    <div class="flex items-center">
-      <img class="w-10 h-10 rounded-full mr-4" src="{{ asset('images/baju.jpg') }}" alt="Avatar of Jonathan Reinink">
-      <div class="text-sm">
-        <p class="text-gray-900 leading-none">Jonathan Reinink</p>
-        <p class="text-gray-600">Aug 18</p>
-      </div>
-    </div>
-  </div>
-</div>
+<!-- Repeat similar structure for other articles -->
 </x-app-layout>
