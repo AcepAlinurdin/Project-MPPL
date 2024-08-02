@@ -88,6 +88,10 @@
             meningkatkan kualitas layanan dan produk kami. Terima kasih telah mempercayakan kebutuhan pakaian Anda
             kepada Konveksi AR Production.
         </p>
+
+        <div class="flex flex-col items-center py-10 bg-gray-100">
+    <a href="https://wa.me/0882000882684" class="bg-red-800 hover:bg-red-900 text-white font-medium rounded-lg text-sm px-6 py-3 shadow-md transition duration-300 ease-in-out">Hubungi via WhatsApp</a>
+</div>
     </div>
 
     <div>
@@ -206,6 +210,8 @@
             </div>
         </div>
     </div>
+    
+
 
     </div>
 
